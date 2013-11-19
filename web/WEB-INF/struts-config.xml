@@ -19,9 +19,15 @@
     </global-forwards>
 
     <action-mappings>
-        <action path="/Welcome21" forward="/welcomeStruts.jsp"/>
-        <action path="/linkAprepa2" type="actions.actionP1P2" validate="false">
+        <!-- Aqui pueden ver como funciona el success y failure sobre la accion
+            plantillaActions declarada en el source package Actions.plantillaActions
+            y el archivo platillaActions.java, queda de ustedes experimentar un poco mas
+            con esto. La parte de validate se las debo pues todavia poseo vagos conocimientos
+            sobre ese tag. -->
+        <action path="/linkAprepa2" type="actions.plantillaActions" validate="false">
+            <!--Si el forward es Success, va a prepa2.jsp-->
             <forward name="success" path="/prepa2.jsp"/>
+            <!--Si no es Success, es decir, es Failure, va a welcomeStruts.jsp-->
             <forward name="failure" path="/welcomeStruts.jsp"/>
         </action>
     </action-mappings>

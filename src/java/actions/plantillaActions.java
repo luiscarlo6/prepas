@@ -17,7 +17,7 @@ import org.apache.struts.action.ActionMessage;
  *
  * @author jidc28
  */
-public class actionP1P2 extends org.apache.struts.action.Action {
+public class plantillaActions extends org.apache.struts.action.Action {
     /* forward name="success" path="" */
     private static final String SUCCESS = "success";
     private static final String FAILURE = "failure";
@@ -46,6 +46,11 @@ public class actionP1P2 extends org.apache.struts.action.Action {
         return mapping.findForward(SUCCESS);
         
         return mapping.findForward(FAILURE);
+        
+//        Recuerden que esto es una plantilla trabajada con condicionales
+//        dentro de su sistema ustedes deben modelar tal cual si fuera un programa
+//        comun y corriente, es decir, pueden usar IF, ELSE, WHILE, entre otras
+//        herramientas que provea java para realizar su flujo en el sistema.
     }
     
 }
