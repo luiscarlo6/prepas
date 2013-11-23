@@ -7,7 +7,10 @@
 
 <struts-config>
     <form-beans>
-    
+    <!-- En los form beans deben colocar las clases que utilizaran dentro de 
+         los actions, sino struts les dira que no consigue el form bean a cual
+         asociarse para determinado action-->
+        <form-bean name="Prepa" type="Clases.Prepa"/>
     </form-beans>
     
     <global-exceptions>
@@ -28,6 +31,13 @@
             <!--Si el forward es Success, va a prepa2.jsp-->
             <forward name="success" path="/prepa2.jsp"/>
             <!--Si no es Success, es decir, es Failure, va a welcomeStruts.jsp-->
+            <forward name="failure" path="/welcomeStruts.jsp"/>
+        </action>
+        <!-- En este action se utiliza el form bean "Prepa", es importante que lo incluyan,
+            pueden probar ver que pasa cuando no lo incluyen y asi reconocen el error
+            si algun dia lo tienen-->
+        <action path="/formulario1" name="Prepa" type="actions.almacenarEjemplo" validate="false">
+            <forward name="success" path="/agregado.jsp"/>
             <forward name="failure" path="/welcomeStruts.jsp"/>
         </action>
     </action-mappings>

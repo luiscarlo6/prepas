@@ -19,7 +19,33 @@
         <h1>ESTA ES LA PRIMERA PAGINA DE LA PREPA</h1>
         <html:link action="/linkAprepa2">
             <html:button property="" value="LINK"></html:button>
-            
+
         </html:link>
+
+        <html:form action="/formulario1" acceptCharset="UTF-8">
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td> Codigo </td>
+                        <td>
+                            <html:text name="Prepa" property="codigo"/>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Nombre </td>
+                        <td>
+                            <html:text name="Prepa" property="nombre"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+
+                <html:submit value="agregar"/>
+                <html:reset value="reset"/>
+            </p>
+        </html:form>
+
     </body>
 </html>
